@@ -55,7 +55,7 @@ if (!empty($_POST["search_text"])) {
             if (!empty($search_conditions)) {
             $sql = "SELECT * FROM event_details WHERE " . implode(" OR ", $search_conditions);
             $result = mysqli_query($conn, $sql);
-            echo '<p>Search result for <span style="font-weight:bold;">' . $search_text . '</span></p>';
+            //echo '<p>Search result for <span style="font-weight:bold;">' . $search_text . '</span></p>';
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo '<div>';
